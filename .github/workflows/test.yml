@@ -1,0 +1,14 @@
+name: test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run test suite in busybox
+        run: docker run --rm -v "$PWD":/w busybox:musl sh /w/test/run.sh
