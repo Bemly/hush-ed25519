@@ -55,7 +55,7 @@ variable, because shell strings stop at NUL bytes.
 | `ed25519_seed_hex <secret>` | 64 lowercase hex | repeat secret to ≥32 bytes, truncate to 32 |
 | `ed25519_sign_secret <secret> <msg>` | 128 lowercase hex | `seed_hex` + `sign_hex` |
 | `ed25519_verify_secret <secret> <msg> <sig>` | exit 0 / 1 | `seed_hex` → pub → verify |
-| `hsed_sign`, `hsed_verify`, `hsed_pub` | aliases | shorter names |
+| `ed_sign`, `ed_verify`, `ed_pub`, `ed_seed` | aliases | shorter names |
 
 - `-` as message path reads stdin.
 - Seeds and signatures are hex in, hex out; uppercase hex is accepted.
